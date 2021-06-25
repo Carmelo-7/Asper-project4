@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="branding-logo"><img src="img/logo1.png" alt="logo"></div>
+
+        <ul class="nav-links">
+            <li class="off"> <a href="index.html">Home</a></li>
+            <li class="off"> <a href="pricing.html">Pricing</a></li>
+            <li class="off"> <a href="about.html">About Us</a></li>
+            <li class="off"> <a class="active" href="">Contact</a></li>
+            <span class="off login btn">Log In</span>
+        </ul>
+       
+
+    </div>
+
+    <div class="contact-info">
+        <h1><span>SportsNet</span> Communications Pvt Ltd</h1>
+        <div class="address">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            : W/44th Street , Times Square<br> NY - 10036 , USA
+        </div>
+        <div class="telNo"><i class="fa fa-phone" aria-hidden="true"></i>
+            : +1 - 6226 6777 8888</div>
+        <div class="mail"><i class="fa fa-at" aria-hidden="true"></i>
+            : helpx001@snnet.com</div>
+        <div id="map" style="margin:1.5rem 0;width: 100%; height: 80vh;"></div>
+    </div>
+
+
+    <footer>
+        <div class="branding">
+            <div class="branding-logo"><img src="img/logo.png" alt="logo"></div>
+            <h3>Copyright © 2021</h3>
+        </div>
+
+        <div class="quick-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <a href="#">
+                <i class="fab fa-github fa-2x"></i>
+
+            </a>
+            <a href="#">
+                <i class="fab fa-facebook fa-2x"></i>
+
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram fa-2x"></i>
+
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter fa-2x"></i>
+
+            </a>
+        </div>
+    </footer>
+
+    
+    <script>
+        let map;
+        function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 40.7580, lng: -73.9855 },
+    zoom: 8,
+  });
+}
+
+
+</script>
+
+<script src="navbar.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAr8xoQhwdBKbQZ6afWc9Oyj3wBg1wi8BE&callback=initMap">
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:200,
+          duration:1000
+      });
+    </script>
+
+</body>
+
+</html>

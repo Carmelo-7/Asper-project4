@@ -1,0 +1,288 @@
+@import 'components';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato',sans-serif;
+    max-width: 100%;
+}
+body{
+    width: 100%;
+}
+
+.btn{border-radius: 35px; color: white;font-size: 1rem;padding:0.5rem 1.5rem;}
+
+
+
+.hero{
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 85vh;
+    align-items: center;
+    padding: 2.5rem;
+    overflow: hidden;
+
+    
+
+    .info{
+        position: absolute;
+        z-index: 3;
+        color: white;
+        top: 5rem;
+        max-width: 45%;
+
+        
+        h1{
+            font-size: 50px;
+            font-weight: bolder;
+            margin: 1.5rem;
+            opacity: 0.85;
+            white-space: pre-wrap;
+        }
+
+        p{
+            color: #bdbebd;
+            margin: 1.5rem;
+            line-height: 2rem;
+            letter-spacing: 1px;
+            white-space: pre-wrap;
+        }
+
+        @include mobile(1050px){
+            position: relative;
+           
+            h1{margin-top:5rem ;}
+
+            p,h1{text-align: center;white-space: pre-wrap;}
+        }
+    }
+
+    .illustration{
+        position: absolute;
+      top: 1rem;
+    right: 2rem;
+        z-index: 3;
+        height: 400px;
+        width: 600px;
+        @include mobile(1050px){position: static;}
+
+        img{
+            height: 100%;
+            width: 100%;
+            stroke-opacity: 0;
+        }
+    }
+
+    .sign-up{
+        background: #696968;
+        position: absolute;
+        z-index: 3;
+        bottom: 10.5rem;
+        left: 3.7rem;
+        @include mobile(1050px){position: static;}
+    }
+    .read-more{
+        background: transparent;
+        border: 1px white solid;
+        position: absolute;
+        z-index: 3;
+        bottom: 10.5rem;
+        left: 13rem;
+        @include mobile(1050px){position: static;} 
+    }
+
+    .carat{
+        transform: rotate(180deg);
+position: absolute;
+z-index: 3;
+color: white;
+font-size: 3rem;
+bottom: 100px;
+left: 50%;
+animation: slide-down 1s linear 1s infinite forwards;
+    }
+ 
+
+   
+
+
+    &::before{
+        content: '';
+        background-image: url("../img/tech-daily-PGuCnUzsRSM-unsplash.jpg");
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-position:center;
+        background-size:100% 150%;
+        background-repeat: no-repeat ;
+        filter: blur(1.5px);
+    }
+
+    &::after{
+        content: '';
+        background: black;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.6;
+        position: absolute;
+
+    }
+
+    @include mobile (1050px){
+        &::before,&::after{display: none;}
+        display: flex;
+        gap: 5rem;
+        height: auto;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.content{
+
+    white-space: nowrap;
+    padding: 2rem;
+    overflow: hidden;
+    .heading{
+        .line{
+         opacity: 0.3;
+        }
+
+        .heading-text{
+            font-size: 1.5rem;
+            margin: 2rem;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight:200;
+            
+        }
+    }
+}
+
+.content{
+
+    .card{
+        background-color: #f9f9f9;
+       margin: 2rem 0;
+       padding: 2rem;
+
+       h1{
+           letter-spacing: 5px;
+       }
+
+       .images{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 0;
+
+       }
+    }
+       
+     .card.basketball .images{
+
+       [alt="basketball"]{
+           height: 300px;
+           width: 300px;
+       }
+       [alt="nba"]{
+           height: 100px;
+           width: 50px;
+       }
+       [alt="fiba"]{
+           height: 100px;
+           width: 200px;
+       }
+       [alt="olympics"]{
+           height: 100px;
+           width: 200px;
+       }
+    }
+
+     .card.football .images{
+
+       [alt="football"]{
+           height: 300px;
+           width: 200px;
+       }
+       [alt="lfp"]{
+           height: 100px;
+           width: 100px;
+       }
+       [alt="epl"]{
+           height: 100px;
+           width: 200px;
+       }
+       [alt="fifa"]{
+           height: 80px;
+           width: 150px;
+       }
+    }
+}
+
+
+footer{
+    color: white;
+    max-width: 100%;
+    padding: 20px 40px;
+    background-color: #002240;
+    position: relative;
+    top:170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    
+    .branding{
+        display: flex;
+        flex-direction: column;
+       
+        h3{
+            font-weight: 300;
+            position: relative;
+            left: 2rem;
+
+        }
+
+       
+
+    }
+    div{
+        margin: 20px 0;
+    }
+    .quick-links{
+        ul{
+            list-style: none;
+        li a{
+            text-decoration: none;
+            color: white;
+        }}
+    }
+    .social{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        
+    a{
+        color: white;
+        text-decoration: none;
+        
+    }
+   }  
+    a:hover{
+        color: white;
+        
+    }
+}
+
